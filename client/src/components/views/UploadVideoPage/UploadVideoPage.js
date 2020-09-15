@@ -59,8 +59,7 @@ function UploadVideoPage(props) {
         }
 
         if (title === "" || Description === "" ||
-            Categories === "" || FilePath === "" ||
-            Duration === "" || Thumbnail === "") {
+            Categories === "" || FilePath === "") {
             return alert('Please first fill all the fields')
         }
 
@@ -75,7 +74,7 @@ function UploadVideoPage(props) {
             thumbnail: Thumbnail
         }
 
-        axios.post('/api/video/uploadVideo', variables)
+        axios.post('http://13.234.194.160:8080/api/video/uploadVideo', variables)
             .then(response => {
                 if (response.data.success) {
                     alert('video Uploaded Successfully')
@@ -96,7 +95,7 @@ function UploadVideoPage(props) {
         console.log(files)
         formData.append("file", files[0])
 
-        axios.post('/api/video/uploadfiles', formData, config)
+        axios.post('http://13.234.194.160:8080/api/video/uploadfiles', formData, config)
             .then(response => {
                 if (response.data.success) {
 
@@ -107,8 +106,8 @@ function UploadVideoPage(props) {
                     setFilePath(response.data.filePath)
 
                     //gerenate thumbnail with this filepath ! 
-
-                    axios.post('/api/video/thumbnail', variable)
+		console.log("successfully sent to server");
+                    axios.post('http://13.234.194.160:8080/api/video/thumbnail', variable)
                         .then(response => {
                             if (response.data.success) {
                                 setDuration(response.data.fileDuration)
@@ -151,7 +150,8 @@ function UploadVideoPage(props) {
 
                     {Thumbnail !== "" &&
                         <div>
-                            <img src={`http://13.234.194.160:8080/${Thumbnail}`} alt="haha" />
+			<h3>Video Uploaded Successfully...</h3>
+			<p>Fill the Remaining Details...</p>
                         </div>
                     }
                 </div>

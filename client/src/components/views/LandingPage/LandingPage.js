@@ -33,14 +33,8 @@ function LandingPage() {
         return <Col lg={6} md={8} xs={24}>
             <div style={{ position: 'relative' }}>
                 <a href={`/video/${video._id}`} >
-                <img style={{ width: '100%' }} alt="thumbnail" src={`http://13.234.194.160:8080/${video.thumbnail}`} />
-                <div className=" duration"
-                    style={{ bottom: 0, right:0, position: 'absolute', margin: '4px', 
-                    color: '#fff', backgroundColor: 'rgba(17, 17, 17, 0.8)', opacity: 0.8, 
-                    padding: '2px 4px', borderRadius:'2px', letterSpacing:'0.5px', fontSize:'12px',
-                    fontWeight:'500', lineHeight:'12px' }}>
-                    <span>{minutes} : {seconds}</span>
-                </div>
+                <img style={{ width: '100%' }} alt="thumbnail" src={`https://lrznig.bn.files.1drv.com/y4mnY0aw0Y9VBaAQ0JyxytP6HsDTUbjWTrQ-K-Hsc3MthY65slhUhyvvlbr2SeYmiJbj3hhrhwUYvJ23EiUoalTR3-xdcn2UaTP_U5LGs9wgWUaui0zuAFodBs_d4uG3y9QHdL_eQuZzVp3kciJJ1mPHj-l-xIVzxLAxEseR8b07I2T2DbtIdlIPBtjek9-bfN4TngQJZk5f0VQJHBcFrYOsQ?width=320&height=240&cropmode=none`} />
+
                 </a>
             </div><br />
             <Meta

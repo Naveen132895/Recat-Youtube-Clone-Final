@@ -26,7 +26,7 @@ function SideVideo() {
        return <div style={{ display: 'flex', marginTop: '1rem', padding: '0 2rem' }}>
         <div style={{ width:'40%', marginRight:'1rem' }}>
             <a href={`/video/${video._id}`}  style={{ color:'gray' }}>
-                <img style={{ width: '100%' }} src={`http://13.234.194.160:8080/${video.thumbnail}`} alt="thumbnail" />
+                <img style={{ width: '100%' }} src={`https://lrznig.bn.files.1drv.com/y4mnY0aw0Y9VBaAQ0JyxytP6HsDTUbjWTrQ-K-Hsc3MthY65slhUhyvvlbr2SeYmiJbj3hhrhwUYvJ23EiUoalTR3-xdcn2UaTP_U5LGs9wgWUaui0zuAFodBs_d4uG3y9QHdL_eQuZzVp3kciJJ1mPHj-l-xIVzxLAxEseR8b07I2T2DbtIdlIPBtjek9-bfN4TngQJZk5f0VQJHBcFrYOsQ?width=320&height=240&cropmode=none`} alt="thumbnail" />
             </a>
         </div>
 
@@ -35,7 +35,6 @@ function SideVideo() {
                 <span style={{ fontSize: '1rem', color: 'black' }}>{video.title}  </span><br />
                 <span>{video.writer.name}</span><br />
                 <span>{video.views}</span><br />
-                <span>{minutes} : {seconds}</span><br />
             </a>
         </div>
     </div>
